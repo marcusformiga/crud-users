@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "marcusformiga <kiko.antares@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+  },
   "dependencies": {
     "class-validator": "^0.13.1",
     "express": "^4.17.1",
