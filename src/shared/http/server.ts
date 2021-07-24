@@ -9,6 +9,7 @@ const app = express()
 const port = 3002
 
 app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 app.get('/test', (request: Request, response: Response) =>{
     return response.send('Rota de teste')
