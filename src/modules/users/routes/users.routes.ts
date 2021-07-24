@@ -9,3 +9,4 @@ const userController = new UserController()
 
 userRoutes.get("/", userController.listAll)
 userRoutes.post("/", userController.create)
+userRoutes.get(":id", userController.listOne)
