@@ -4,13 +4,14 @@ import 'express-async-errors'
 import '../database/connect'
 import {Request, Response, NextFunction} from 'express'
 import { AppError } from '../errors/AppError'
+import { routes } from '../routes'
 
 const app = express()
 const port = 3002
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-
+app.use(routes)
 app.get('/test', (request: Request, response: Response) =>{
     return response.send('Rota de teste')
 })
