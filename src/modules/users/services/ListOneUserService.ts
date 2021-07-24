@@ -6,7 +6,7 @@ import { AppError } from "../../../shared/errors/AppError";
 export class ListOneUserService {
     public async execute(id: string):Promise<User| undefined>{
         const userRepository = getCustomRepository(UserRepository)
-        const user = userRepository.findById(id)
+        const user = await userRepository.findById(id)
         if(!user){
             throw new AppError(`User com id ${id} não foi encontrado`, 404)
         }

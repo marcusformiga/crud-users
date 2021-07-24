@@ -17,7 +17,7 @@ export class UserController {
     public async listOne(request: Request, response: Response): Promise <Response>{
         const id = request.params.id
         const listUser = new ListOneUserService()
-        const user = listUser.execute(id)
+        const user = await listUser.execute(id)
         return response.status(200).json(user)
     }
 }
