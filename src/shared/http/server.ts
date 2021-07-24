@@ -1,6 +1,7 @@
 import 'reflect-metadata'
 import express from 'express'
 import 'express-async-errors'
+import '../database/connect'
 import {Request, Response, NextFunction} from 'express'
 import { AppError } from '../errors/AppError'
 
